@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*  */
+}
+
+body {
+  background-color: #09090a;
+  color: white;
+
+  height: 100vh;
+}
+
+header {
+  display: flex; /* Flexibiliza a disposição dos elementos */
+  align-items: center; /* Só promove mudanças em conjunto com a propriedade flex */
+  justify-content: space-between; /* Faz os elementos ocuparem todo o espaço disponível, deixando um espaço entre eles */
+  padding: 48px; /* Ao incluir apenas um valor, este será o mesmo para os 4 lados do elemento embaixo, em cima, esquerda e direita */
+
+  position: fixed;
+  background-color: #09090a;
+  width: 100%;
+}
+
+button {
+  padding: 16px 24px; /* O primeiro refere-se top e bottom, o segundo, às laterais*/
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
+  background-color: transparent;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 12px; /* inclui espaço entre os elementos dentro de outrelemento com a propriedade flex ativada */
+
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+  padding: 180px 48px 48px;
+  width: fit-content;
+}
+
+.habits {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 54px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  /* possui peso 10 na composição de estilo */
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div {
+  /* referencia todas as div dentro da classe day (neste caso, o texto de data) */
+  margin-bottom: 8px;
+
+  font-family: "Roboto Mono";
+  font-size: 20;
+  line-height: 125%;
+  color: #a1a1aa;
+  text-align: center;
+}
+
+input {
+  appearance: none; /* Remove a aparência padrão do imput */
+  -webkit-appearense: none; /* Garante que a remoção da aparência do elemento seja entendida por diversos navegadores */
+
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272a;
+  border-radius: 8px;
+  background: #18181b;
+}
+
+/* Pseudo-selector - quando vem acompanhado dos dois pontos - acessa a propriedade do elemento*/
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+
+/* Aplica o estilo baseado na largura da tela do dispositivo */
+@media (max-width: 570px) {
+  button div {
+    /* Acessa a div do interior do botão que contém o texto */
+    display: none; /* Oculta o elemento especificado */
+  }
+}
