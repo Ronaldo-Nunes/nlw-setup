@@ -35,7 +35,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Habits é um app para ajudar a ratrear os hábitos.
 
-
+- [Visite o projeto on-line] (https://ronaldo-nunes.github.io/nlw-setup/explorer/)
 
 ## 🔖 Layout
 
